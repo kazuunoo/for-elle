@@ -117,20 +117,39 @@ if (enterButton) {
     });
 
 
-    /* =================================
-       100 REASONS BUTTON
-    ================================= */
+  /* =================================
+   100 REASONS — FIRST LETTER
+================================ */
 
-    const reasonsButton = document.getElementById("reasonsButton");
+const reasonsButton = document.getElementById("reasonsButton");
+const reasonsContainer = document.getElementById("reasonsContainer");
+const closeLetter = document.getElementById("closeLetter");
 
-    if (reasonsButton) {
+if (reasonsButton && reasonsContainer) {
 
-        reasonsButton.addEventListener("click", function () {
+    reasonsButton.addEventListener("click", function () {
 
-            alert("the 100 reasons are coming next ♡");
+        reasonsContainer.classList.add("open");
 
+        reasonsButton.style.display = "none";
+
+        reasonsContainer.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
         });
 
-    }
+    });
 
-});
+}
+
+if (closeLetter && reasonsContainer) {
+
+    closeLetter.addEventListener("click", function () {
+
+        reasonsContainer.classList.remove("open");
+
+        reasonsButton.style.display = "inline-block";
+
+    });
+
+}
