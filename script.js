@@ -1,181 +1,112 @@
-/* ================================= /
-/ RECORD PLAYER /
-/ ================================= */
+document.addEventListener("DOMContentLoaded", function () {
 
-const vinyl = document.getElementById("vinyl");
-const playButton = document.getElementById("playButton");
+    /* =================================
+       RECORD PLAYER
+    ================================= */
 
-let playing = false;
+    const vinyl = document.getElementById("vinyl");
+    const playButton = document.getElementById("playButton");
 
+    if (vinyl && playButton) {
 
-playButton.addEventListener("click", function () {
+        let playing = false;
 
-playing = !playing;
+        playButton.addEventListener("click", function () {
 
-vinyl.classList.toggle("playing", playing);
+            playing = !playing;
 
-if (playing) {
+            vinyl.classList.toggle("playing", playing);
 
-playButton.textContent = "Ⅱ";
+            if (playing) {
 
-// Open Sparks in Spotify
-window.open(
-"https://open.spotify.com/track/7D0RhFcb3CrfPuTJ0obrod",
-"_blank"
-);
+                playButton.textContent = "Ⅱ";
 
-} else {
+                window.open(
+                    "https://open.spotify.com/track/7D0RhFcb3CrfPuTJ0obrod",
+                    "_blank"
+                );
 
-playButton.textContent = "▶";
+            } else {
 
-}
+                playButton.textContent = "▶";
 
-});
+            }
 
+        });
 
-/* ================================= /
-/ ENTER /
-/ ================================= */
-
-const enterButton = document.getElementById("enterButton");
-
-enterButton.addEventListener("click", function () {
-
-document.querySelector(".placeholder").scrollIntoView({
-behavior: "smooth"
-});
-
-});
-
-/* ================================= /
-/ RECORD PLAYER /
-/ ================================= */
-
-const vinyl = document.getElementById("vinyl");
-const playButton = document.getElementById("playButton");
-
-let playing = false;
+    }
 
 
-playButton.addEventListener("click", function () {
+    /* =================================
+       START THE STORY
+    ================================= */
 
-playing = !playing;
+    const startStory = document.getElementById("startStory");
 
-vinyl.classList.toggle("playing", playing);
+    if (startStory) {
 
-if (playing) {
+        startStory.addEventListener("click", function () {
 
-playButton.textContent = "Ⅱ";
+            const firstChapter = document.querySelector(".chapter");
 
-window.open(
-"https://open.spotify.com/track/7D0RhFcb3CrfPuTJ0obrod",
-"_blank"
-);
+            if (firstChapter) {
 
-} else {
+                firstChapter.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
 
-playButton.textContent = "▶";
+            }
 
-}
+        });
 
-});
-
-
-/* ================================= /
-/ STORY REVEAL /
-/ ================================= */
-
-const chapters = document.querySelectorAll(".chapter");
+    }
 
 
-const observer = new IntersectionObserver(
+    /* =================================
+       NEXT MEMORY BUTTONS
+    ================================= */
 
-function(entries) {
+    const nextButtons = document.querySelectorAll(".next-memory");
 
-entries.forEach(function(entry) {
+    nextButtons.forEach(function (button) {
 
-if (entry.isIntersecting) {
+        button.addEventListener("click", function () {
 
-entry.target.classList.add("visible");
+            const currentChapter = button.closest(".chapter");
 
-}
+            if (!currentChapter) return;
 
-});
+            const nextChapter = currentChapter.nextElementSibling;
 
-},
+            if (nextChapter) {
 
-{
-threshold: 0.2
-}
+                nextChapter.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
 
-);
+            }
+
+        });
+
+    });
 
 
-chapters.forEach(function(chapter) {
+    /* =================================
+       100 REASONS BUTTON
+    ================================= */
 
-observer.observe(chapter);
+    const reasonsButton = document.getElementById("reasonsButton");
+
+    if (reasonsButton) {
+
+        reasonsButton.addEventListener("click", function () {
+
+            alert("the 100 reasons are coming next ♡");
+
+        });
+
+    }
 
 });
-
-
-/* ================================= /
-/ START STORY BUTTON /
-/ ================================= */
-
-const startStory = document.getElementById("startStory");
-
-if (startStory) {
-
-startStory.addEventListener("click", function() {
-
-document.querySelector(".chapter").scrollIntoView({
-behavior: "smooth"
-});
-
-});
-
-}
-
-
-/* ================================= /
-/ NEXT MEMORY BUTTONS /
-/ ================================= */
-
-const nextButtons = document.querySelectorAll(".next-memory");
-
-nextButtons.forEach(function(button) {
-
-button.addEventListener("click", function() {
-
-const currentChapter = button.closest(".chapter");
-
-const nextChapter = currentChapter.nextElementSibling;
-
-if (nextChapter) {
-
-nextChapter.scrollIntoView({
-behavior: "smooth"
-});
-
-}
-
-});
-
-});
-
-
-/* ================================= /
-/ REASONS BUTTON /
-/ ================================= */
-
-const reasonsButton = document.getElementById("reasonsButton");
-
-if (reasonsButton) {
-
-reasonsButton.addEventListener("click", function() {
-
-alert("the 100 reasons are coming next ♡");
-
-});
-
-}
