@@ -644,25 +644,7 @@ h1 em {
 
     text-align: center;
 
-    opacity: 0;
-
-    transform: translateY(50px);
-
-    transition:
-        opacity 1s ease,
-        transform 1s ease;
-
 }
-
-
-.chapter.visible {
-
-    opacity: 1;
-
-    transform: translateY(0);
-
-}
-
 
 .chapter-number {
 
