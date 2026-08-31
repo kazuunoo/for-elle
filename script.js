@@ -38,6 +38,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =================================
+   ENTER → STORY
+================================= */
+
+const enterButton = document.getElementById("enterButton");
+
+if (enterButton) {
+
+    enterButton.addEventListener("click", function () {
+
+        const firstChapter = document.querySelector(".chapter");
+
+        if (firstChapter) {
+
+            firstChapter.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+    });
+
+}
+    /* =================================
        START THE STORY
     ================================= */
 
