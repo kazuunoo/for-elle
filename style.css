@@ -1431,3 +1431,114 @@ h1 em {
 
     color: #111;
 }
+.elle-phone {
+    display: block !important;
+
+    width: 300px !important;
+    max-width: 85vw !important;
+
+    min-height: 340px !important;
+
+    margin: 35px auto 50px !important;
+    padding: 10px !important;
+
+    background: #111 !important;
+    color: #111 !important;
+
+    border: 2px solid #111 !important;
+    border-radius: 28px !important;
+
+    box-sizing: border-box !important;
+
+    box-shadow: 10px 10px 0 #777 !important;
+
+    position: relative !important;
+    z-index: 20 !important;
+
+    transform: rotate(1deg) !important;
+}
+
+.elle-phone .phone-top {
+    display: flex !important;
+
+    justify-content: space-between !important;
+
+    padding: 8px 14px !important;
+
+    color: white !important;
+}
+
+.elle-phone .message-screen {
+    display: block !important;
+
+    min-height: 300px !important;
+
+    background: #ebe7de !important;
+
+    border-radius: 20px !important;
+
+    overflow: hidden !important;
+}
+
+.elle-phone .message-header {
+    display: flex !important;
+
+    justify-content: space-between !important;
+    align-items: center !important;
+
+    padding: 16px !important;
+
+    color: #111 !important;
+
+    border-bottom: 1px solid #ccc !important;
+}
+
+.elle-phone .message-header div {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+}
+
+.elle-phone .message-header strong {
+    font-size: 13px !important;
+}
+
+.elle-phone .message-header small {
+    font-size: 8px !important;
+
+    opacity: 0.5 !important;
+}
+
+.elle-phone .messages {
+    display: flex !important;
+
+    min-height: 220px !important;
+
+    padding: 20px 15px !important;
+
+    align-items: flex-start !important;
+
+    justify-content: flex-end !important;
+
+    box-sizing: border-box !important;
+}
+
+.elle-phone .message {
+    display: block !important;
+
+    max-width: 75% !important;
+
+    padding: 10px 14px !important;
+
+    background: white !important;
+
+    color: #111 !important;
+
+    border: 1px solid #ccc !important;
+
+    border-radius: 16px 16px 16px 4px !important;
+
+    font-size: 12px !important;
+}
