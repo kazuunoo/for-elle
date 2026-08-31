@@ -1207,3 +1207,111 @@ h1 em {
     }
 
 }
+
+/* =================================
+   CHAPTER 03 — MESSAGE
+================================= */
+
+.phone {
+    width: min(330px, 85vw);
+    padding: 10px;
+    background: #111;
+    border: 2px solid #333;
+    border-radius: 28px;
+
+    box-shadow:
+        10px 10px 0 #777,
+        0 25px 45px rgba(0,0,0,0.15);
+
+    margin: 10px 0 45px;
+
+    transform: rotate(1deg);
+    transition: transform 0.4s ease;
+}
+
+.phone:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+
+.phone-top {
+    color: #eee;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 8px 14px;
+
+    font-family: monospace;
+    font-size: 9px;
+}
+
+.message-screen {
+    background: #ebe7de;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #111;
+}
+
+.message-header {
+    padding: 16px;
+
+    border-bottom: 1px solid #ccc;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: monospace;
+}
+
+.message-header div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.message-header strong {
+    font-size: 13px;
+}
+
+.message-header small {
+    font-size: 8px;
+    opacity: 0.45;
+    margin-top: 3px;
+}
+
+.back {
+    font-size: 25px;
+    opacity: 0.5;
+}
+
+.messages {
+    min-height: 220px;
+
+    padding: 25px 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.message {
+    max-width: 75%;
+
+    padding: 10px 14px;
+
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+
+    border-radius: 16px;
+}
+
+.message.received {
+    align-self: flex-start;
+
+    background: #fff;
+
+    border: 1px solid #ccc;
+
+    border-bottom-left-radius: 4px;
+}
