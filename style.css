@@ -1,0 +1,519 @@
+/* ================================= */
+/*            GENERAL                */
+/* ================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #f2efe8;
+    font-family: Georgia, serif;
+}
+
+
+/* ================================= */
+/*            COVER                  */
+/* ================================= */
+
+.cover {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* subtle circles in background */
+
+.cover::before,
+.cover::after {
+    content: "";
+
+    position: absolute;
+
+    border: 1px solid #444;
+
+    border-radius: 50%;
+
+    opacity: 0.25;
+}
+
+.cover::before {
+    width: 600px;
+    height: 600px;
+}
+
+.cover::after {
+    width: 800px;
+    height: 800px;
+}
+
+
+.cover-content {
+    width: 100%;
+    max-width: 700px;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ================================= */
+/*            TEXT                   */
+/* ================================= */
+
+.small-text {
+    font-family: monospace;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-size: 11px;
+
+    opacity: 0.6;
+}
+
+
+h1 {
+    font-size: clamp(70px, 12vw, 130px);
+
+    font-weight: normal;
+
+    line-height: 0.9;
+
+    margin: 20px 0;
+}
+
+h1 em {
+    font-style: italic;
+}
+
+
+.subtitle {
+    font-size: 18px;
+
+    opacity: 0.65;
+
+    margin-bottom: 40px;
+}
+
+
+/* ================================= */
+/*          RECORD PLAYER            */
+/* ================================= */
+
+.record-player {
+
+    width: min(470px, 95vw);
+
+    margin: auto;
+
+    padding: 20px;
+
+    background: #151515;
+
+    border: 1px solid #333;
+
+    border-radius: 8px;
+
+    box-shadow: 0 25px 60px #000;
+}
+
+
+.turntable {
+
+    height: 300px;
+
+    background: #202020;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* VINYL */
+
+.vinyl {
+
+    width: 235px;
+    height: 235px;
+
+    border-radius: 50%;
+
+    background:
+        repeating-radial-gradient(
+            circle,
+            #050505 0px,
+            #111 2px,
+            #050505 4px
+        );
+
+    box-shadow: 0 10px 30px #000;
+
+    position: relative;
+
+    animation: spin 4s linear infinite;
+
+    animation-play-state: paused;
+}
+
+
+/* when music button is clicked */
+
+.vinyl.playing {
+    animation-play-state: running;
+}
+
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* record label */
+
+.record-label {
+
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #e8e4db;
+
+    color: #111;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+.record-label small {
+    font-size: 7px;
+}
+
+.record-label b {
+    margin-top: 3px;
+}
+
+
+/* ================================= */
+/*            TONEARM                */
+/* ================================= */
+
+.tonearm {
+
+    position: absolute;
+
+    right: 40px;
+    top: 35px;
+
+    width: 140px;
+    height: 120px;
+
+    transform: rotate(-18deg);
+
+    transform-origin: 90% 10%;
+
+    transition: 0.6s;
+}
+
+
+.arm {
+
+    position: absolute;
+
+    right: 10px;
+
+    width: 7px;
+    height: 105px;
+
+    background: #ccc;
+
+    border-radius: 10px;
+}
+
+
+.needle {
+
+    position: absolute;
+
+    left: 20px;
+    bottom: 5px;
+
+    width: 18px;
+    height: 8px;
+
+    background: #aaa;
+
+    transform: rotate(-10deg);
+}
+
+
+/* move tonearm when playing */
+
+.vinyl.playing ~ .tonearm {
+
+    transform: rotate(10deg);
+
+}
+
+
+/* ================================= */
+/*          PLAYER CONTROLS          */
+/* ================================= */
+
+.player-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    text-align: left;
+
+    padding: 18px 5px 5px;
+}
+
+
+#playButton {
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 1px solid #777;
+
+    background: #eee;
+
+    color: #111;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+}
+
+
+.player-info p {
+
+    margin: 0 0 5px;
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    opacity: 0.5;
+}
+
+
+.player-info strong {
+
+    font-size: 15px;
+
+    font-weight: normal;
+}
+
+
+/* ================================= */
+/*             BUTTONS               */
+/* ================================= */
+
+.music-note {
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    opacity: 0.45;
+
+    margin: 18px;
+}
+
+
+.buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+
+.buttons a {
+
+    color: #eee;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #555;
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    padding-bottom: 3px;
+}
+
+
+#enterButton {
+
+    background: transparent;
+
+    color: #eee;
+
+    border: 1px solid #777;
+
+    padding: 12px 20px;
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+#enterButton:hover {
+
+    background: #eee;
+
+    color: #111;
+
+}
+
+
+/* ================================= */
+/*         PLACEHOLDER PAGE          */
+/* ================================= */
+
+.placeholder {
+
+    min-height: 100vh;
+
+    background: #ebe7de;
+
+    color: #111;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+
+.placeholder p {
+
+    font-family: monospace;
+
+    text-transform: uppercase;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.5;
+}
+
+
+.placeholder h2 {
+
+    font-size: clamp(35px, 6vw, 65px);
+
+    font-weight: normal;
+
+}
+
+
+/* ================================= */
+/*          MOBILE                   */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+    .turntable {
+        height: 270px;
+    }
+
+    .vinyl {
+        width: 205px;
+        height: 205px;
+    }
+
+    .tonearm {
+        right: 15px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+  }
