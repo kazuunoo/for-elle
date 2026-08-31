@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =================================
+/* =================================
    ENTER → STORY
 ================================= */
 
@@ -47,11 +47,11 @@ if (enterButton) {
 
     enterButton.addEventListener("click", function () {
 
-        const firstChapter = document.querySelector(".chapter");
+        const story = document.querySelector(".story");
 
-        if (firstChapter) {
+        if (story) {
 
-            firstChapter.scrollIntoView({
+            story.scrollIntoView({
                 behavior: "smooth",
                 block: "start"
             });
