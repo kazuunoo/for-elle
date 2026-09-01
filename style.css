@@ -1866,3 +1866,59 @@ h1 em {
 .letter-card {
     animation: none !important;
 }
+
+/* =================================
+   100 REASONS — FINAL CLEAN FIX
+================================= */
+
+.story-ending .reason-transition .reasons-container {
+    display: block;
+    width: min(420px, 88vw);
+    margin: 50px auto 0;
+    padding: 0;
+    position: static;
+    transform: translateZ(0) !important;
+}
+
+.story-ending .reason-transition .letter-card {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 40px 28px 30px;
+
+    box-sizing: border-box;
+
+    background: #f4f1e9;
+    color: #111;
+
+    border: 1px solid #aaa;
+    box-shadow: 6px 6px 0 #111;
+
+    position: static;
+
+    transform: translateZ(0) !important;
+    rotate: 0deg !important;
+
+    animation: none !important;
+}
+
+.story-ending .reason-transition .letter-number {
+    color: #111;
+    transform: none !important;
+}
+
+.story-ending .reason-transition .letter-content {
+    color: #111 !important;
+    transform: none !important;
+}
+
+.story-ending .reason-transition .letter-content p {
+    color: #111 !important;
+    transform: none !important;
+}
+
+.story-ending .reason-transition .close-letter {
+    color: #111;
+    border: 1px solid #111;
+    transform: none !important;
+}
