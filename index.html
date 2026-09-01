@@ -486,5 +486,26 @@
     </section>
     <script src="script.js"></script>
 
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const button = document.getElementById("reasonsButton");
+    const letter = document.getElementById("reasonsContainer");
+
+    if (button && letter) {
+
+        button.addEventListener("click", function () {
+
+            letter.classList.add("open");
+
+            button.style.display = "none";
+
+        });
+
+    }
+
+});
+    </script>
+
 </body>
     </html>
