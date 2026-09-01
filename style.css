@@ -1851,3 +1851,18 @@ h1 em {
     }
 
 }
+
+/* =================================
+   FORCE LETTER STRAIGHT
+================================= */
+
+.reasons-container,
+.reasons-container.open,
+.letter-card {
+    transform: none !important;
+    rotate: none !important;
+}
+
+.letter-card {
+    animation: none !important;
+}
