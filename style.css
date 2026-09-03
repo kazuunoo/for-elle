@@ -1376,3 +1376,274 @@ h1 em {
         transform: translateY(0);
     }
 }
+
+/* ================================
+   100 REASONS — LITTLE BOOK
+================================ */
+
+.reasons-container {
+    width: min(90%, 760px);
+    margin: 60px auto 0;
+    position: relative;
+}
+
+.reason-page {
+    display: none;
+    position: relative;
+    width: 100%;
+    max-height: 75vh;
+    overflow-y: auto;
+
+    padding: 45px 45px 35px;
+
+    background: rgba(255, 250, 246, 0.96);
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 50px rgba(80, 55, 45, 0.12),
+        0 4px 12px rgba(80, 55, 45, 0.06);
+
+    box-sizing: border-box;
+
+    animation: bookPageIn 0.6s ease;
+}
+
+.reason-page.active {
+    display: block;
+}
+
+@keyframes bookPageIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* book header */
+
+.book-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    opacity: 0.5;
+}
+
+
+/* chapter title */
+
+.book-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.book-title h2 {
+    margin: 0 auto 8px;
+
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.book-title p {
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+
+/* reasons */
+
+.reason-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.reason {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 15px;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid rgba(80, 55, 45, 0.1);
+}
+
+.reason:last-child {
+    border-bottom: none;
+}
+
+.reason > span {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    opacity: 0.4;
+    padding-top: 3px;
+}
+
+.reason p {
+    margin: 0;
+
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+
+/* final reason */
+
+.reason.final-reason {
+    margin-top: 10px;
+    padding: 28px 0;
+
+    border-top: 1px solid rgba(80, 55, 45, 0.15);
+}
+
+.reason.final-reason span {
+    opacity: 0.65;
+}
+
+.reason.final-reason p {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+
+/* ending */
+
+.book-ending {
+    margin-top: 45px;
+    padding-top: 35px;
+
+    border-top: 1px solid rgba(80, 55, 45, 0.12);
+
+    text-align: center;
+}
+
+.book-ending p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.book-ending .final-line {
+    margin-top: 35px;
+
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+
+/* turn page button */
+
+.next-reason-page {
+    display: block;
+
+    margin: 35px auto 5px;
+    padding: 12px 22px;
+
+    background: transparent;
+    border: 1px solid rgba(80, 55, 45, 0.25);
+    border-radius: 999px;
+
+    font: inherit;
+    font-size: 0.8rem;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.next-reason-page:hover {
+    transform: translateX(4px);
+    background: rgba(80, 55, 45, 0.05);
+    border-color: rgba(80, 55, 45, 0.4);
+}
+
+
+/* scrollbar */
+
+.reason-page::-webkit-scrollbar {
+    width: 5px;
+}
+
+.reason-page::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.reason-page::-webkit-scrollbar-thumb {
+    background: rgba(80, 55, 45, 0.18);
+    border-radius: 10px;
+}
+
+
+/* mobile */
+
+@media (max-width: 600px) {
+
+    .reasons-container {
+        width: 92%;
+        margin-top: 40px;
+    }
+
+    .reason-page {
+        max-height: 78vh;
+        padding: 30px 23px 25px;
+        border-radius: 20px;
+    }
+
+    .book-header {
+        font-size: 0.62rem;
+        margin-bottom: 28px;
+    }
+
+    .book-title {
+        margin-bottom: 25px;
+    }
+
+    .book-title h2 {
+        font-size: 1.45rem;
+    }
+
+    .reason {
+        grid-template-columns: 32px 1fr;
+        gap: 10px;
+        padding: 15px 0;
+    }
+
+    .reason p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .reason.final-reason p {
+        font-size: 1.05rem;
+    }
+
+    .book-ending {
+        margin-top: 35px;
+        padding-top: 28px;
+    }
+
+    .book-ending p {
+        font-size: 0.9rem;
+        line-height: 1.75;
+    }
+
+}
