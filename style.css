@@ -1264,17 +1264,18 @@ h1 em {
     margin-right: auto;
 }
 
-   .reasons-container {
+   .reason-transition {
+    width: 100%;
+    max-width: 650px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.reasons-container {
     width: 100%;
     max-width: 420px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.letter-card {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
 }
    
     .turntable {
