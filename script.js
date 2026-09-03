@@ -37,30 +37,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-/* =================================
-   ENTER → STORY
-================================= */
+    /* =================================
+       ENTER → STORY
+    ================================= */
 
-const enterButton = document.getElementById("enterButton");
+    const enterButton = document.getElementById("enterButton");
 
-if (enterButton) {
+    if (enterButton) {
 
-    enterButton.addEventListener("click", function () {
+        enterButton.addEventListener("click", function () {
 
-        const story = document.querySelector(".story");
+            const story = document.querySelector(".story");
 
-        if (story) {
+            if (story) {
 
-            story.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
+                story.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
 
-        }
+            }
 
-    });
+        });
 
-}
+    }
+
+
     /* =================================
        START THE STORY
     ================================= */
@@ -87,35 +89,6 @@ if (enterButton) {
     }
 
 
-    /* =================================
-       NEXT MEMORY BUTTONS
-    ================================= */
-
-    const nextButtons = document.querySelectorAll(".next-memory");
-
-    nextButtons.forEach(function (button) {
-
-        button.addEventListener("click", function () {
-
-            const currentChapter = button.closest(".chapter");
-
-            if (!currentChapter) return;
-
-            const nextChapter = currentChapter.nextElementSibling;
-
-            if (nextChapter) {
-
-                nextChapter.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-
-            }
-
-        });
-
-    });
-  
     /* =================================
        NEXT MEMORY BUTTONS
     ================================= */
@@ -206,4 +179,4 @@ if (enterButton) {
 
     });
 
-});    
+});
