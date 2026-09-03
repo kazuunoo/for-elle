@@ -1257,6 +1257,13 @@ h1 em {
 
 @media (max-width: 600px) {
 
+.record-player {
+    width: 100%;
+    max-width: 470px;
+    margin-left: auto;
+    margin-right: auto;
+}
+   
     .turntable {
         height: 270px;
     }
