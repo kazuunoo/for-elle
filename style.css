@@ -1327,3 +1327,52 @@ h1 em {
     }
 
 }
+
+/* =================================
+   COVER — POLISH
+================================= */
+
+.cover-content {
+    animation: coverFadeIn 1.2s ease both;
+}
+
+.cover .small-text {
+    animation: coverFadeIn 1s ease 0.1s both;
+}
+
+.cover h1 {
+    letter-spacing: -2px;
+}
+
+.cover .subtitle {
+    letter-spacing: 0.2px;
+}
+
+.record-player {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.record-player:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 30px 70px #000;
+}
+
+.music-note {
+    transition: opacity 0.3s ease;
+}
+
+.music-note:hover {
+    opacity: 0.75;
+}
+
+@keyframes coverFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
