@@ -1,6 +1,6 @@
-/* ================================= */
-/*            GENERAL                */
-/* ================================= */
+/* =================================
+   GENERAL
+================================= */
 
 * {
     box-sizing: border-box;
@@ -18,9 +18,9 @@ body {
 }
 
 
-/* ================================= */
-/*            COVER                  */
-/* ================================= */
+/* =================================
+   COVER
+================================= */
 
 .cover {
     min-height: 100vh;
@@ -35,9 +35,6 @@ body {
     overflow: hidden;
 }
 
-
-/* subtle circles in background */
-
 .cover::before,
 .cover::after {
     content: "";
@@ -45,7 +42,6 @@ body {
     position: absolute;
 
     border: 1px solid #444;
-
     border-radius: 50%;
 
     opacity: 0.25;
@@ -61,7 +57,6 @@ body {
     height: 800px;
 }
 
-
 .cover-content {
     width: 100%;
     max-width: 700px;
@@ -73,28 +68,24 @@ body {
 }
 
 
-/* ================================= */
-/*            TEXT                   */
-/* ================================= */
+/* =================================
+   COVER TEXT
+================================= */
 
 .small-text {
     font-family: monospace;
 
     text-transform: uppercase;
-
     letter-spacing: 3px;
 
     font-size: 11px;
-
     opacity: 0.6;
 }
-
 
 h1 {
     font-size: clamp(70px, 12vw, 130px);
 
     font-weight: normal;
-
     line-height: 0.9;
 
     margin: 20px 0;
@@ -103,7 +94,6 @@ h1 {
 h1 em {
     font-style: italic;
 }
-
 
 .subtitle {
     font-size: 18px;
@@ -114,30 +104,25 @@ h1 em {
 }
 
 
-/* ================================= */
-/*          RECORD PLAYER            */
-/* ================================= */
+/* =================================
+   RECORD PLAYER
+================================= */
 
 .record-player {
-
     width: min(470px, 95vw);
 
     margin: auto;
-
     padding: 20px;
 
     background: #151515;
 
     border: 1px solid #333;
-
     border-radius: 8px;
 
     box-shadow: 0 25px 60px #000;
 }
 
-
 .turntable {
-
     height: 300px;
 
     background: #202020;
@@ -145,13 +130,10 @@ h1 em {
     border-radius: 5px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     position: relative;
-
     overflow: hidden;
 }
 
@@ -159,7 +141,6 @@ h1 em {
 /* VINYL */
 
 .vinyl {
-
     width: 235px;
     height: 235px;
 
@@ -178,20 +159,14 @@ h1 em {
     position: relative;
 
     animation: spin 4s linear infinite;
-
     animation-play-state: paused;
 }
-
-
-/* when music button is clicked */
 
 .vinyl.playing {
     animation-play-state: running;
 }
 
-
 @keyframes spin {
-
     from {
         transform: rotate(0deg);
     }
@@ -199,14 +174,12 @@ h1 em {
     to {
         transform: rotate(360deg);
     }
-
 }
 
 
-/* record label */
+/* RECORD LABEL */
 
 .record-label {
-
     position: absolute;
 
     width: 70px;
@@ -220,19 +193,14 @@ h1 em {
     border-radius: 50%;
 
     background: #e8e4db;
-
     color: #111;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     align-items: center;
 
     font-family: monospace;
-
     font-size: 9px;
 
     letter-spacing: 1px;
@@ -247,12 +215,11 @@ h1 em {
 }
 
 
-/* ================================= */
-/*            TONEARM                */
-/* ================================= */
+/* =================================
+   TONEARM
+================================= */
 
 .tonearm {
-
     position: absolute;
 
     right: 40px;
@@ -262,15 +229,12 @@ h1 em {
     height: 120px;
 
     transform: rotate(-18deg);
-
     transform-origin: 90% 10%;
 
-    transition: 0.6s;
+    transition: transform 0.6s ease;
 }
 
-
 .arm {
-
     position: absolute;
 
     right: 10px;
@@ -283,9 +247,7 @@ h1 em {
     border-radius: 10px;
 }
 
-
 .needle {
-
     position: absolute;
 
     left: 20px;
@@ -299,22 +261,16 @@ h1 em {
     transform: rotate(-10deg);
 }
 
-
-/* move tonearm when playing */
-
 .vinyl.playing ~ .tonearm {
-
     transform: rotate(10deg);
-
 }
 
 
-/* ================================= */
-/*          PLAYER CONTROLS          */
-/* ================================= */
+/* =================================
+   PLAYER CONTROLS
+================================= */
 
 .player-info {
-
     display: flex;
 
     align-items: center;
@@ -326,9 +282,7 @@ h1 em {
     padding: 18px 5px 5px;
 }
 
-
 #playButton {
-
     width: 45px;
     height: 45px;
 
@@ -337,48 +291,37 @@ h1 em {
     border: 1px solid #777;
 
     background: #eee;
-
     color: #111;
 
     cursor: pointer;
 
     font-size: 14px;
-
 }
 
-
 .player-info p {
-
     margin: 0 0 5px;
 
     font-family: monospace;
-
     font-size: 9px;
 
     text-transform: uppercase;
-
     letter-spacing: 1px;
 
     opacity: 0.5;
 }
 
-
 .player-info strong {
-
     font-size: 15px;
-
     font-weight: normal;
 }
 
 
-/* ================================= */
-/*             BUTTONS               */
-/* ================================= */
+/* =================================
+   BUTTONS
+================================= */
 
 .music-note {
-
     font-family: monospace;
-
     font-size: 11px;
 
     opacity: 0.45;
@@ -386,21 +329,16 @@ h1 em {
     margin: 18px;
 }
 
-
 .buttons {
-
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     gap: 20px;
 }
 
-
 .buttons a {
-
     color: #eee;
 
     text-decoration: none;
@@ -408,17 +346,13 @@ h1 em {
     border-bottom: 1px solid #555;
 
     font-family: monospace;
-
     font-size: 11px;
 
     padding-bottom: 3px;
 }
 
-
 #enterButton {
-
     background: transparent;
-
     color: #eee;
 
     border: 1px solid #777;
@@ -426,7 +360,6 @@ h1 em {
     padding: 12px 20px;
 
     font-family: monospace;
-
     font-size: 11px;
 
     cursor: pointer;
@@ -434,92 +367,15 @@ h1 em {
     transition: 0.25s;
 }
 
-
 #enterButton:hover {
-
     background: #eee;
-
     color: #111;
-
 }
 
 
-/* ================================= */
-/*         PLACEHOLDER PAGE          */
-/* ================================= */
-
-.placeholder {
-
-    min-height: 100vh;
-
-    background: #ebe7de;
-
-    color: #111;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 30px;
-}
-
-
-.placeholder p {
-
-    font-family: monospace;
-
-    text-transform: uppercase;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
-
-    opacity: 0.5;
-}
-
-
-.placeholder h2 {
-
-    font-size: clamp(35px, 6vw, 65px);
-
-    font-weight: normal;
-
-}
-
-
-/* ================================= */
-/*          MOBILE                   */
-/* ================================= */
-
-@media (max-width: 600px) {
-
-    .turntable {
-        height: 270px;
-    }
-
-    .vinyl {
-        width: 205px;
-        height: 205px;
-    }
-
-    .tonearm {
-        right: 15px;
-    }
-
-    .buttons {
-        flex-direction: column;
-    }
-
-  }
-/* ================================= */
-/*             STORY                  */
-/* ================================= */
+/* =================================
+   STORY
+================================= */
 
 .story {
     background: #ebe7de;
@@ -529,7 +385,9 @@ h1 em {
 }
 
 
-/* INTRO */
+/* =================================
+   STORY INTRO
+================================= */
 
 .story-intro {
     min-height: 100vh;
@@ -545,12 +403,10 @@ h1 em {
     padding: 60px 25px;
 }
 
-
 .eyebrow {
     font-family: monospace;
 
     font-size: 10px;
-
     letter-spacing: 3px;
 
     text-transform: uppercase;
@@ -560,33 +416,32 @@ h1 em {
     margin-bottom: 25px;
 }
 
-
 .story-intro h2 {
     font-size: clamp(45px, 8vw, 85px);
 
     font-weight: normal;
-
     line-height: 0.95;
 
     margin: 0 0 30px;
 }
 
-
 .story-intro p {
     max-width: 500px;
 
     font-size: 18px;
-
     line-height: 1.7;
 
     opacity: 0.75;
 }
 
 
+/* =================================
+   STORY BUTTONS
+================================= */
+
 #startStory,
 #reasonsButton,
 .next-memory {
-
     margin-top: 30px;
 
     padding: 13px 22px;
@@ -598,9 +453,7 @@ h1 em {
     color: #111;
 
     font-family: monospace;
-
     font-size: 10px;
-
     letter-spacing: 1px;
 
     cursor: pointer;
@@ -608,24 +461,19 @@ h1 em {
     transition: 0.3s;
 }
 
-
 #startStory:hover,
 #reasonsButton:hover,
 .next-memory:hover {
-
     background: #111;
-
     color: #eee;
-
 }
 
 
-/* ================================= */
-/*             CHAPTERS               */
-/* ================================= */
+/* =================================
+   CHAPTERS
+================================= */
 
 .chapter {
-
     min-height: 100vh;
 
     max-width: 850px;
@@ -635,376 +483,22 @@ h1 em {
     padding: 120px 30px;
 
     display: flex;
-
     flex-direction: column;
 
     justify-content: center;
-
     align-items: center;
 
     text-align: center;
 
-}
-
-.chapter-number {
-
-    font-family: monospace;
-
-    font-size: 12px;
-
-    border: 1px solid #999;
-
-    border-radius: 50%;
-
-    width: 42px;
-
-    height: 42px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin-bottom: 30px;
-}
-
-
-.chapter h3 {
-
-    font-size: clamp(45px, 7vw, 80px);
-
-    line-height: 0.95;
-
-    font-weight: normal;
-
-    margin: 10px 0 45px;
-
-}
-
-
-.chapter h3 em {
-
-    font-style: italic;
-
-}
-
-
-.memory-card {
-
-    max-width: 580px;
-
-    padding: 40px;
-
-    border: 1px solid #bbb;
-
-    background: rgba(255,255,255,0.25);
-
-    text-align: left;
-
-    line-height: 1.8;
-
-    font-size: 16px;
-
-}
-
-
-.memory-card p {
-
-    margin: 0 0 20px;
-}
-
-
-.memory-card p:last-child {
-
-    margin-bottom: 0;
-
-}
-
-
-/* ================================= */
-/*              QUIZ                  */
-/* ================================= */
-
-.quiz-card {
-
-    width: min(350px, 90vw);
-
-    margin-top: 45px;
-
-    padding: 30px;
-
-    background: #f5f2eb;
-
-    border: 1px solid #aaa;
-
-    box-shadow: 8px 8px 0 #111;
-
-    text-align: left;
-
-    font-family: monospace;
-
-}
-
-
-.quiz-card > span {
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-}
-
-
-.quiz-card p {
-
-    margin: 25px 0;
-
-    font-family: Georgia, serif;
-
-    font-size: 17px;
-
-}
-
-
-.quiz-card div {
-
-    padding: 8px 0;
-
-    opacity: 0.55;
-
-}
-
-
-.quiz-card .correct {
-
-    opacity: 1;
-
-    font-weight: bold;
-
-}
-
-
-/* ================================= */
-/*           CHAT BUBBLE              */
-/* ================================= */
-
-.chat-bubble {
-
-    background: #111;
-
-    color: #eee;
-
-    padding: 20px 25px;
-
-    border-radius: 20px 20px 4px 20px;
-
-    max-width: 350px;
-
-    text-align: left;
-
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-
-}
-
-
-.chat-bubble span {
-
-    font-family: monospace;
-
-    font-size: 9px;
-
-    opacity: 0.5;
-
-}
-
-
-.chat-bubble p {
-
-    margin: 10px 0 0;
-
-    font-size: 17px;
-
-}
-
-
-.therapy-caption {
-
-    margin-top: 35px;
-
-    line-height: 1.6;
-
-}
-
-
-.therapy-room {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 25px;
-
-    margin-top: 25px;
-
-    font-family: monospace;
-
-}
-
-
-.therapy-room div {
-
-    border: 1px solid #999;
-
-    padding: 15px 20px;
-
-}
-
-
-.therapy-room span {
-
-    opacity: 0.5;
-
-}
-
-
-/* ================================= */
-/*         STORY ENDING               */
-/* ================================= */
-
-.story-ending {
-
-    min-height: 100vh;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-
-    padding: 80px 25px;
-
-    background: #111;
-
-    color: #eee;
-
-}
-
-
-.story-ending > p {
-
-    max-width: 550px;
-
-    font-size: 18px;
-
-    line-height: 1.8;
-
-    opacity: 0.65;
-
-}
-
-
-.story-ending h3 {
-
-    max-width: 750px;
-
-    font-size: clamp(40px, 7vw, 75px);
-
-    font-weight: normal;
-
-    line-height: 1;
-
-    margin: 30px 0;
-}
-
-
-.reason-transition {
-
-    margin-top: 100px;
-
-}
-
-
-.reason-transition span {
-
-    font-family: monospace;
-
-    font-size: 11px;
-
-    letter-spacing: 3px;
-
-    opacity: 0.5;
-
-}
-
-
-.reason-transition h2 {
-
-    font-size: clamp(40px, 7vw, 75px);
-
-    font-weight: normal;
-
-    line-height: 1;
-
-}
-
-
-.reason-transition button {
-
-    border-color: #777;
-
-    color: #eee;
-}
-
-
-/* ================================= */
-/*          MOBILE                    */
-/* ================================= */
-
-@media (max-width: 600px) {
-
-    .chapter {
-
-        padding: 90px 20px;
-
-    }
-
-    .memory-card {
-
-        padding: 25px;
-
-        font-size: 15px;
-
-    }
-
-    .chapter h3 {
-
-        margin-bottom: 30px;
-
-    }
-
-}
-
-/* =================================
-   MEMORY OBJECTS
-================================= */
-
-.chapter {
     position: relative;
     overflow: hidden;
 }
-
-
-/* little decorative marks */
 
 .chapter::before {
     content: "✦";
 
     position: absolute;
+
     top: 12%;
     left: 8%;
 
@@ -1016,6 +510,7 @@ h1 em {
     content: "♡";
 
     position: absolute;
+
     bottom: 12%;
     right: 8%;
 
@@ -1023,13 +518,56 @@ h1 em {
     opacity: 0.2;
 }
 
+.chapter-number {
+    font-family: monospace;
+
+    font-size: 12px;
+
+    border: 1px solid #999;
+    border-radius: 50%;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    transition: transform 0.4s ease;
+}
+
+.chapter:hover .chapter-number {
+    transform: rotate(12deg);
+}
+
+.chapter h3 {
+    font-size: clamp(45px, 7vw, 80px);
+
+    line-height: 0.95;
+
+    font-weight: normal;
+
+    margin: 10px 0 45px;
+}
+
+.chapter h3 em {
+    font-style: italic;
+}
+
 
 /* =================================
-   MEMORY CARD — PAPER
+   MEMORY CARDS
 ================================= */
 
 .memory-card {
     position: relative;
+
+    width: 100%;
+    max-width: 580px;
+
+    padding: 40px;
 
     background: #f8f5ed;
 
@@ -1037,25 +575,35 @@ h1 em {
 
     box-shadow:
         8px 8px 0 #111,
-        0 20px 35px rgba(0,0,0,0.08);
+        0 20px 35px rgba(0, 0, 0, 0.08);
+
+    text-align: left;
+
+    line-height: 1.8;
+    font-size: 16px;
 
     transform: rotate(-1deg);
 
-    transition: transform 0.4s ease,
-                box-shadow 0.4s ease;
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
 }
-
 
 .memory-card:hover {
     transform: rotate(0deg) translateY(-5px);
 
     box-shadow:
         12px 12px 0 #111,
-        0 25px 40px rgba(0,0,0,0.1);
+        0 25px 40px rgba(0, 0, 0, 0.1);
 }
 
+.memory-card p {
+    margin: 0 0 20px;
+}
 
-/* little paper corner */
+.memory-card p:last-child {
+    margin-bottom: 0;
+}
 
 .memory-card::before {
     content: "";
@@ -1073,15 +621,35 @@ h1 em {
     border-left: 1px solid #aaa;
     border-bottom: 1px solid #aaa;
 
-    clip-path: polygon(100% 0, 100% 100%, 0 0);
+    clip-path: polygon(
+        100% 0,
+        100% 100%,
+        0 0
+    );
 }
 
 
 /* =================================
-   QUIZ PAPER
+   QUIZ CARD
 ================================= */
 
 .quiz-card {
+    width: min(350px, 90vw);
+
+    margin-top: 45px;
+
+    padding: 30px;
+
+    background: #f5f2eb;
+
+    border: 1px solid #aaa;
+
+    box-shadow: 8px 8px 0 #111;
+
+    text-align: left;
+
+    font-family: monospace;
+
     transform: rotate(1.5deg);
 
     transition: transform 0.3s ease;
@@ -1091,13 +659,198 @@ h1 em {
     transform: rotate(0deg) translateY(-5px);
 }
 
+.quiz-card > span {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.quiz-card p {
+    margin: 25px 0;
+
+    font-family: Georgia, serif;
+    font-size: 17px;
+}
+
+.quiz-card div {
+    padding: 8px 0;
+    opacity: 0.55;
+}
+
+.quiz-card .correct {
+    opacity: 1;
+    font-weight: bold;
+}
+
 
 /* =================================
-   CHAT BUBBLE
+   CHAPTER 03 — PHONE
+================================= */
+
+.elle-phone {
+    display: block;
+
+    width: min(330px, 85vw);
+
+    min-height: 340px;
+
+    margin: 35px auto 50px;
+
+    padding: 10px;
+
+    background: #111;
+    color: #111;
+
+    border: 2px solid #111;
+    border-radius: 28px;
+
+    box-shadow: 10px 10px 0 #777;
+
+    position: relative;
+    z-index: 2;
+
+    transform: rotate(1deg);
+
+    transition: transform 0.4s ease;
+}
+
+.elle-phone:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+
+.phone-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 8px 14px;
+
+    color: white;
+
+    font-family: monospace;
+    font-size: 9px;
+}
+
+.message-screen {
+    min-height: 300px;
+
+    background: #ebe7de;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    color: #111;
+}
+
+.message-header {
+    padding: 16px;
+
+    border-bottom: 1px solid #ccc;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: monospace;
+}
+
+.message-header div {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.message-header strong {
+    font-size: 13px;
+}
+
+.message-header small {
+    font-size: 8px;
+
+    opacity: 0.45;
+
+    margin-top: 3px;
+}
+
+.back {
+    font-size: 25px;
+    opacity: 0.5;
+}
+
+.messages {
+    min-height: 220px;
+
+    padding: 20px 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.message {
+    max-width: 75%;
+
+    padding: 10px 14px;
+
+    background: white;
+    color: #111;
+
+    border: 1px solid #ccc;
+
+    border-radius: 16px 16px 16px 4px;
+
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.message-two {
+    animation: messageAppear 0.7s ease 0.5s both;
+}
+
+.message-three {
+    animation: messageAppear 0.7s ease 1s both;
+}
+
+@keyframes messageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =================================
+   CHAPTER 04 — THERAPY
 ================================= */
 
 .chat-bubble {
     position: relative;
+
+    background: #111;
+    color: #eee;
+
+    padding: 20px 25px;
+
+    border-radius: 20px 20px 4px 20px;
+
+    max-width: 350px;
+
+    text-align: left;
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 
     transform: rotate(-1deg);
 
@@ -1108,6 +861,19 @@ h1 em {
     transform: rotate(0deg) translateY(-4px);
 }
 
+.chat-bubble span {
+    font-family: monospace;
+
+    font-size: 9px;
+
+    opacity: 0.5;
+}
+
+.chat-bubble p {
+    margin: 10px 0 0;
+
+    font-size: 17px;
+}
 
 .chat-bubble::after {
     content: "";
@@ -1122,28 +888,41 @@ h1 em {
 
     background: #111;
 
-    clip-path: polygon(0 0, 100% 0, 0 100%);
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        0 100%
+    );
 }
 
+.therapy-caption {
+    margin-top: 35px;
 
-/* =================================
-   THERAPY SESSION
-================================= */
+    line-height: 1.6;
+}
 
 .therapy-room {
-    position: relative;
+    width: min(400px, 88vw);
 
-    padding: 30px;
+    margin: 25px auto 45px;
 
-    border: 1px dashed #aaa;
+    padding: 35px 25px;
 
-    min-width: 260px;
+    border: 1px dashed #888;
+
+    background: #f4f1e9;
+
+    display: flex;
 
     justify-content: center;
+    align-items: center;
 
-    background: rgba(255,255,255,0.2);
+    gap: 35px;
+
+    box-shadow: 8px 8px 0 #111;
+
+    transform: rotate(-0.8deg);
 }
-
 
 .therapy-room::before {
     content: "therapy session™";
@@ -1170,426 +949,6 @@ h1 em {
     opacity: 0.55;
 }
 
-
-/* =================================
-   CHAPTER TRANSITIONS
-================================= */
-
-.chapter-number {
-    transition: transform 0.4s ease;
-}
-
-.chapter:hover .chapter-number {
-    transform: rotate(12deg);
-}
-
-
-/* =================================
-   SMALL SCREEN ADJUSTMENTS
-================================= */
-
-@media (max-width: 600px) {
-
-    .chapter::before {
-        left: 5%;
-    }
-
-    .chapter::after {
-        right: 5%;
-    }
-
-    .memory-card {
-        transform: rotate(-0.5deg);
-    }
-
-    .quiz-card {
-        transform: rotate(0.8deg);
-    }
-
-}
-
-/* =================================
-   CHAPTER 03 — MESSAGE
-================================= */
-
-.phone {
-    width: min(330px, 85vw);
-    padding: 10px;
-    background: #111;
-    border: 2px solid #333;
-    border-radius: 28px;
-
-    box-shadow:
-        10px 10px 0 #777,
-        0 25px 45px rgba(0,0,0,0.15);
-
-    margin: 10px 0 45px;
-
-    transform: rotate(1deg);
-    transition: transform 0.4s ease;
-}
-
-.phone:hover {
-    transform: rotate(0deg) translateY(-5px);
-}
-
-.phone-top {
-    color: #eee;
-    display: flex;
-    justify-content: space-between;
-
-    padding: 8px 14px;
-
-    font-family: monospace;
-    font-size: 9px;
-}
-
-.message-screen {
-    background: #ebe7de;
-    border-radius: 20px;
-    overflow: hidden;
-    color: #111;
-}
-
-.message-header {
-    padding: 16px;
-
-    border-bottom: 1px solid #ccc;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    font-family: monospace;
-}
-
-.message-header div {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.message-header strong {
-    font-size: 13px;
-}
-
-.message-header small {
-    font-size: 8px;
-    opacity: 0.45;
-    margin-top: 3px;
-}
-
-.back {
-    font-size: 25px;
-    opacity: 0.5;
-}
-
-.messages {
-    min-height: 220px;
-
-    padding: 25px 15px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.message {
-    max-width: 75%;
-
-    padding: 10px 14px;
-
-    font-family: sans-serif;
-    font-size: 12px;
-    line-height: 1.4;
-
-    border-radius: 16px;
-}
-
-.message.received {
-    align-self: flex-start;
-
-    background: #fff;
-
-    border: 1px solid #ccc;
-
-    border-bottom-left-radius: 4px;
-}
-
-/* CHAPTER 03 PHONE — FORCE DISPLAY */
-
-.chapter .phone {
-    display: block;
-    position: relative;
-
-    width: min(330px, 85vw);
-    min-height: 300px;
-
-    margin: 30px auto 50px;
-
-    padding: 10px;
-
-    background: #111;
-    color: #111;
-
-    border: 2px solid #111;
-    border-radius: 28px;
-
-    box-sizing: border-box;
-
-    box-shadow: 10px 10px 0 #777;
-
-    transform: rotate(1deg);
-
-    z-index: 10;
-}
-
-.chapter .phone-top {
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-
-    color: white;
-
-    padding: 8px 14px;
-
-    font-family: monospace;
-    font-size: 9px;
-}
-
-.chapter .message-screen {
-    display: block;
-
-    min-height: 260px;
-
-    background: #ebe7de;
-    color: #111;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-}
-
-.chapter .message-header {
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 16px;
-
-    border-bottom: 1px solid #ccc;
-
-    font-family: monospace;
-}
-
-.chapter .message-header div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.chapter .message-header strong {
-    font-size: 13px;
-}
-
-.chapter .message-header small {
-    font-size: 8px;
-    opacity: 0.5;
-}
-
-.chapter .back {
-    font-size: 24px;
-}
-
-.chapter .messages {
-    display: flex;
-
-    min-height: 190px;
-
-    padding: 20px 15px;
-
-    align-items: flex-start;
-    justify-content: flex-end;
-
-    box-sizing: border-box;
-}
-
-.chapter .message.received {
-    display: block;
-
-    padding: 10px 14px;
-
-    background: white;
-
-    border: 1px solid #ccc;
-    border-radius: 16px 16px 16px 4px;
-
-    font-family: sans-serif;
-    font-size: 12px;
-
-    color: #111;
-}
-.elle-phone {
-    display: block !important;
-
-    width: 300px !important;
-    max-width: 85vw !important;
-
-    min-height: 340px !important;
-
-    margin: 35px auto 50px !important;
-    padding: 10px !important;
-
-    background: #111 !important;
-    color: #111 !important;
-
-    border: 2px solid #111 !important;
-    border-radius: 28px !important;
-
-    box-sizing: border-box !important;
-
-    box-shadow: 10px 10px 0 #777 !important;
-
-    position: relative !important;
-    z-index: 20 !important;
-
-    transform: rotate(1deg) !important;
-}
-
-.elle-phone .phone-top {
-    display: flex !important;
-
-    justify-content: space-between !important;
-
-    padding: 8px 14px !important;
-
-    color: white !important;
-}
-
-.elle-phone .message-screen {
-    display: block !important;
-
-    min-height: 300px !important;
-
-    background: #ebe7de !important;
-
-    border-radius: 20px !important;
-
-    overflow: hidden !important;
-}
-
-.elle-phone .message-header {
-    display: flex !important;
-
-    justify-content: space-between !important;
-    align-items: center !important;
-
-    padding: 16px !important;
-
-    color: #111 !important;
-
-    border-bottom: 1px solid #ccc !important;
-}
-
-.elle-phone .message-header div {
-    display: flex !important;
-
-    flex-direction: column !important;
-
-    align-items: center !important;
-}
-
-.elle-phone .message-header strong {
-    font-size: 13px !important;
-}
-
-.elle-phone .message-header small {
-    font-size: 8px !important;
-
-    opacity: 0.5 !important;
-}
-
-.elle-phone .messages {
-    display: flex !important;
-
-    min-height: 220px !important;
-
-    padding: 20px 15px !important;
-
-    align-items: flex-start !important;
-
-    justify-content: flex-end !important;
-
-    box-sizing: border-box !important;
-}
-
-.elle-phone .message {
-    display: block !important;
-
-    max-width: 75% !important;
-
-    padding: 10px 14px !important;
-
-    background: white !important;
-
-    color: #111 !important;
-
-    border: 1px solid #ccc !important;
-
-    border-radius: 16px 16px 16px 4px !important;
-
-    font-size: 12px !important;
-}
-
-.elle-phone .message-two {
-    animation: messageAppear 0.7s ease 0.5s both;
-}
-
-.elle-phone .message-three {
-    animation: messageAppear 0.7s ease 1s both;
-}
-
-@keyframes messageAppear {
-    from {
-        opacity: 0;
-        transform: translateY(8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.therapy-room {
-    width: min(400px, 88vw);
-
-    margin: 25px auto 45px;
-
-    padding: 35px 25px;
-
-    border: 1px dashed #888;
-
-    background: #f4f1e9;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 35px;
-
-    box-sizing: border-box;
-
-    transform: rotate(-0.8deg);
-
-    box-shadow: 8px 8px 0 #111;
-}
-
-
 .therapy-person {
     display: flex;
 
@@ -1599,7 +958,6 @@ h1 em {
 
     gap: 8px;
 }
-
 
 .person-icon {
     width: 55px;
@@ -1612,14 +970,12 @@ h1 em {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     background: #ebe7de;
 
     font-size: 20px;
 }
-
 
 .therapy-person small {
     font-family: monospace;
@@ -1630,7 +986,6 @@ h1 em {
 
     opacity: 0.6;
 }
-
 
 .therapy-table {
     width: 35px;
@@ -1643,22 +998,68 @@ h1 em {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     font-size: 14px;
 }
 
-.reason-transition {
+
+/* =================================
+   STORY ENDING
+================================= */
+
+.story-ending {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
     text-align: center;
+
+    padding: 80px 25px;
+
+    background: #111;
+    color: #eee;
+}
+
+.story-ending > p {
+    max-width: 550px;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    opacity: 0.65;
+}
+
+.story-ending h3 {
+    max-width: 750px;
+
+    font-size: clamp(40px, 7vw, 75px);
+
+    font-weight: normal;
+    line-height: 1;
+
+    margin: 30px 0;
+}
+
+
+/* =================================
+   100 REASONS TRANSITION
+================================= */
+
+.reason-transition {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 100px auto 0;
 
     padding: 100px 20px;
 
-    max-width: 650px;
-
-    margin: 0 auto;
+    text-align: center;
 }
-
 
 .transition-whisper {
     display: block;
@@ -1676,7 +1077,6 @@ h1 em {
     margin-bottom: 30px;
 }
 
-
 .reason-transition h2 {
     font-size: clamp(22px, 6vw, 38px);
 
@@ -1686,7 +1086,6 @@ h1 em {
 
     margin: 0 0 25px;
 }
-
 
 .transition-text {
     font-size: 14px;
@@ -1698,7 +1097,6 @@ h1 em {
     margin-bottom: 30px;
 }
 
-
 .transition-divider {
     font-size: 11px;
 
@@ -1706,7 +1104,6 @@ h1 em {
 
     margin: 35px 0;
 }
-
 
 .reason-transition h3 {
     font-size: clamp(28px, 8vw, 52px);
@@ -1718,19 +1115,20 @@ h1 em {
     font-weight: 400;
 }
 
-
 .reason-transition h3 em {
     font-family: Georgia, serif;
-
     font-weight: 400;
 }
 
+
+/* =================================
+   REASONS BUTTON
+================================= */
 
 #reasonsButton {
     padding: 13px 22px;
 
     background: #111;
-
     color: white;
 
     border: none;
@@ -1738,7 +1136,6 @@ h1 em {
     font-family: monospace;
 
     font-size: 10px;
-
     letter-spacing: 1px;
 
     cursor: pointer;
@@ -1746,21 +1143,23 @@ h1 em {
     transition: transform 0.2s ease;
 }
 
-
 #reasonsButton:hover {
     transform: translateY(-3px);
 }
+
 
 /* =================================
    100 REASONS — LETTER
 ================================= */
 
 .reasons-container {
-    display: block;
+    display: none;
 
     width: min(420px, 88vw);
 
     margin: 50px auto 0;
+
+    position: relative;
 }
 
 .reasons-container.open {
@@ -1768,21 +1167,24 @@ h1 em {
 }
 
 .letter-card {
-    background: #f4f1e9;
-    border: 1px solid #aaa;
-
     width: 100%;
 
-    margin: 0 auto;
+    margin: 0;
 
     padding: 40px 28px 30px;
 
     box-sizing: border-box;
 
+    background: #f4f1e9;
+    color: #111;
+
+    border: 1px solid #aaa;
+
     box-shadow: 6px 6px 0 #111;
 
     position: relative;
 
+    /* NO ROTATION */
     transform: none;
 
     animation: letterOpen 0.5s ease both;
@@ -1811,13 +1213,17 @@ h1 em {
 
     text-align: left;
 
-    color: #111 !important;
+    color: #111;
 }
 
 .letter-content p {
-    margin-bottom: 20px;
+    margin: 0 0 20px;
 
-    color: #111 !important;
+    color: #111;
+}
+
+.letter-content p:last-child {
+    margin-bottom: 0;
 }
 
 .close-letter {
@@ -1839,7 +1245,6 @@ h1 em {
 }
 
 @keyframes letterOpen {
-
     from {
         opacity: 0;
         transform: translateY(15px);
@@ -1849,76 +1254,61 @@ h1 em {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
+
 
 /* =================================
-   FORCE LETTER STRAIGHT
+   MOBILE
 ================================= */
 
-.reasons-container,
-.reasons-container.open,
-.letter-card {
-    transform: none !important;
-    rotate: none !important;
-}
+@media (max-width: 600px) {
 
-.letter-card {
-    animation: none !important;
-}
+    .turntable {
+        height: 270px;
+    }
 
-/* =================================
-   100 REASONS — FINAL CLEAN FIX
-================================= */
+    .vinyl {
+        width: 205px;
+        height: 205px;
+    }
 
-.story-ending .reason-transition .reasons-container {
-    display: block;
-    width: min(420px, 88vw);
-    margin: 50px auto 0;
-    padding: 0;
-    position: static;
-    transform: translateZ(0) !important;
-}
+    .tonearm {
+        right: 15px;
+    }
 
-.story-ending .reason-transition .letter-card {
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 40px 28px 30px;
+    .buttons {
+        flex-direction: column;
+    }
 
-    box-sizing: border-box;
+    .chapter {
+        padding: 90px 20px;
+    }
 
-    background: #f4f1e9;
-    color: #111;
+    .memory-card {
+        padding: 25px;
+        font-size: 15px;
 
-    border: 1px solid #aaa;
-    box-shadow: 6px 6px 0 #111;
+        transform: rotate(-0.5deg);
+    }
 
-    position: static;
+    .quiz-card {
+        transform: rotate(0.8deg);
+    }
 
-    transform: translateZ(0) !important;
-    rotate: 0deg !important;
+    .chapter::before {
+        left: 5%;
+    }
 
-    animation: none !important;
-}
+    .chapter::after {
+        right: 5%;
+    }
 
-.story-ending .reason-transition .letter-number {
-    color: #111;
-    transform: none !important;
-}
+    .chapter h3 {
+        margin-bottom: 30px;
+    }
 
-.story-ending .reason-transition .letter-content {
-    color: #111 !important;
-    transform: none !important;
-}
+    .elle-phone {
+        width: min(300px, 85vw);
+    }
 
-.story-ending .reason-transition .letter-content p {
-    color: #111 !important;
-    transform: none !important;
-}
-
-.story-ending .reason-transition .close-letter {
-    color: #111;
-    border: 1px solid #111;
-    transform: none !important;
 }
