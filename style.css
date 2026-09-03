@@ -1147,19 +1147,15 @@ h1 em {
     transform: translateY(-3px);
 }
 
-
 /* =================================
    100 REASONS — LETTER
 ================================= */
 
 .reasons-container {
     display: none;
-
     width: min(420px, 88vw);
-
     margin: 50px auto 0;
-
-    position: relative;
+    padding: 0;
 }
 
 .reasons-container.open {
@@ -1168,9 +1164,7 @@ h1 em {
 
 .letter-card {
     width: 100%;
-
     margin: 0;
-
     padding: 40px 28px 30px;
 
     box-sizing: border-box;
@@ -1184,21 +1178,18 @@ h1 em {
 
     position: relative;
 
-    /* NO ROTATION */
-    transform: none;
+    transform: none !important;
+    rotate: 0deg !important;
 
     animation: letterOpen 0.5s ease both;
 }
 
 .letter-number {
     font-family: monospace;
-
     font-size: 10px;
-
     letter-spacing: 2px;
 
     color: #111;
-
     opacity: 0.5;
 
     margin-bottom: 30px;
@@ -1206,24 +1197,16 @@ h1 em {
 
 .letter-content {
     font-family: Georgia, serif;
-
     font-size: 17px;
-
     line-height: 1.8;
-
     text-align: left;
 
-    color: #111;
+    color: #111 !important;
 }
 
 .letter-content p {
-    margin: 0 0 20px;
-
-    color: #111;
-}
-
-.letter-content p:last-child {
-    margin-bottom: 0;
+    margin-bottom: 20px;
+    color: #111 !important;
 }
 
 .close-letter {
@@ -1238,7 +1221,6 @@ h1 em {
     color: #111;
 
     font-family: monospace;
-
     font-size: 9px;
 
     cursor: pointer;
@@ -1255,7 +1237,6 @@ h1 em {
         transform: translateY(0);
     }
 }
-
 
 /* =================================
    MOBILE
