@@ -1165,7 +1165,7 @@ h1 em {
 ================================= */
 
 .reasons-container {
-    display: none;
+    display: block;
     width: min(420px, 88vw);
     margin: 50px auto 0;
     padding: 0;
