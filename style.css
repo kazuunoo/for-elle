@@ -1264,12 +1264,18 @@ h1 em {
     margin-right: auto;
 }
 
-   .letter-card {
+   .reasons-container {
     width: 100%;
-    max-width: 100%;
+    max-width: 420px;
     margin-left: auto;
     margin-right: auto;
-   }
+}
+
+.letter-card {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
    
     .turntable {
         height: 270px;
