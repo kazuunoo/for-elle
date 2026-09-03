@@ -122,6 +122,19 @@ h1 em {
     box-shadow: 0 25px 60px #000;
 }
 
+.record-player {
+    width: min(470px, 95vw);
+    margin: auto;
+    padding: 20px;
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 25px 60px #000;
+
+    transform: rotate(0deg) !important;
+    rotate: 0deg !important;
+}
+
 .turntable {
     height: 300px;
 
