@@ -116,4 +116,94 @@ if (enterButton) {
 
     });
   
+    /* =================================
+       NEXT MEMORY BUTTONS
+    ================================= */
+
+    const nextButtons = document.querySelectorAll(".next-memory");
+
+    nextButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const currentChapter = button.closest(".chapter");
+
+            if (!currentChapter) return;
+
+            const nextChapter = currentChapter.nextElementSibling;
+
+            if (nextChapter) {
+
+                nextChapter.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+
+        });
+
+    });
+
+
+    /* =================================
+       100 REASONS — LITTLE BOOK
+    ================================= */
+
+    const reasonsButton = document.getElementById("reasonsButton");
+    const reasonsContainer = document.getElementById("reasonsContainer");
+    const reasonPages = document.querySelectorAll(".reason-page");
+    const nextReasonButtons = document.querySelectorAll(".next-reason-page");
+
+    let currentReasonPage = 0;
+
+
+    /* OPEN THE BOOK */
+
+    if (reasonsButton && reasonsContainer && reasonPages.length > 0) {
+
+        reasonsButton.addEventListener("click", function () {
+
+            reasonsContainer.classList.add("open");
+
+            reasonsButton.style.display = "none";
+
+            reasonPages.forEach(function (page) {
+                page.classList.remove("active");
+            });
+
+            currentReasonPage = 0;
+
+            reasonPages[currentReasonPage].classList.add("active");
+
+        });
+
+    }
+
+
+    /* TURN THE PAGES */
+
+    nextReasonButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            if (currentReasonPage >= reasonPages.length - 1) {
+                return;
+            }
+
+            reasonPages[currentReasonPage].classList.remove("active");
+
+            currentReasonPage++;
+
+            reasonPages[currentReasonPage].classList.add("active");
+
+            reasonsContainer.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        });
+
+    });
+
 });    
