@@ -1,9 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* =================================
-       RECORD PLAYER
-    ================================= */
-
     const vinyl = document.getElementById("vinyl");
     const playButton = document.getElementById("playButton");
 
@@ -35,6 +31,72 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     }
+
+
+    const enterButton = document.getElementById("enterButton");
+
+    if (enterButton) {
+
+        enterButton.addEventListener("click", function () {
+
+            const story = document.querySelector(".story");
+
+            if (story) {
+                story.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+
+        });
+
+    }
+
+
+    const startStory = document.getElementById("startStory");
+
+    if (startStory) {
+
+        startStory.addEventListener("click", function () {
+
+            const firstChapter = document.querySelector(".chapter");
+
+            if (firstChapter) {
+                firstChapter.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+
+        });
+
+    }
+
+
+    const nextButtons = document.querySelectorAll(".next-memory");
+
+    nextButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const currentChapter = button.closest(".chapter");
+
+            if (!currentChapter) return;
+
+            const nextChapter = currentChapter.nextElementSibling;
+
+            if (nextChapter) {
+                nextChapter.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+
+        });
+
+    });
+
+});    }
 
 
     /* =================================
